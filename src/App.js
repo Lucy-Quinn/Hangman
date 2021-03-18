@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, component } from "react";
+import { Switch, Route } from "react-router-dom";
+import WelcomePage from './components/WelcomePage/WelcomePage';
+import Game from './components/Game/Game';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+    const [name, setName] = useState('');
+
+    const getName = name => {
+        setName(name);
+    }
+
+    console.log(name)
+    return (
+        <div className="full-page">
+            <Switch>
+                <Route exact path="/" component={() => <WelcomePage getName={getName} />} />
+                <Route exact path="/game" component={() => <Game name={name} />} />
+            </Switch>
+        </div>
+    );
 }
+
 
 export default App;

@@ -1,0 +1,71 @@
+#hangman {
+  margin-left: 30%;
+}
+
+#hangman div {
+  background: #000;
+}
+
+#hangman .base {
+  height: 2px;
+  width: 300px;
+}
+
+#hangman .left-bar {
+  height: 400px;
+  width: 2px;
+}
+
+#hangman .top-bar {
+  height: 2px;
+  width: 200px;
+}
+
+#hangman .right-bar {
+  float: left;
+  height: 30px;
+  margin-left: 200px;
+  width: 2px;
+}
+
+#hangman .head {
+  /* background: none; */
+  border-radius: 100%;
+  float: left;
+  margin-left: 175px;
+  margin-top: -375px;
+  height: 50px;
+  width: 50px;
+}
+
+#hangman .body {
+  float: left;
+  height: 140px;
+  margin-top: -321px;
+  margin-left: 200px;
+  width: 2px;
+}
+
+#hangman .left-arm,
+#hangman .right-arm,
+#hangman .left-leg,
+#hangman .right-leg {
+  float: left;
+  height: 90px;
+  margin-top: -321px;
+  margin-left: 173px;
+  transform: rotate(35deg);
+  width: 2px;
+}
+
+#hangman .right-arm,
+#hangman .right-leg {
+  margin-left: 230px;
+  margin-top: -324px;
+  transform: rotate(140deg);
+}
+
+#hangman .left-leg,
+#hangman .right-leg {
+  margin-top: -192px;
+}
