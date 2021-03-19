@@ -9,7 +9,7 @@ const LettersContainer = styled.div`
     margin: 20px auto;
 `
 
-const Alphabet = styled.p`
+const Alphabet = styled.div`
 font-size: 1.6rem;
 margin-left: 20px;
 `

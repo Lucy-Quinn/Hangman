@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 
 const WORDS = ['Cat', 'Dog', 'Bird']
 
-const NewGame = ({ handleNewWord }) => {
+const NewGame = ({ handleNewWord, setLetters }) => {
 
+    useEffect(() => {
+        chooseRandomWord()
+    }, [])
 
     const chooseRandomWord = () => {
         const randomNumber = Math.floor(Math.random() * WORDS.length);
         const randomWord = WORDS[randomNumber];
         handleNewWord(randomWord);
+        setLetters('');
     }
 
     return (

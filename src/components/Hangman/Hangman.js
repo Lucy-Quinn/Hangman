@@ -4,19 +4,19 @@ import './Hangman.css';
 const Hangman = () => {
     return (
         <div id="hangman">
-            <div class="right-bar"></div>
-            <div class="top-bar"></div>
-            <div class="left-bar"></div>
-            <div class="base"></div>
+            <div className="top-bar"></div>
+            <div className="right-bar"></div>
+            <div className="left-bar"></div>
+            <div className="base"></div>
 
-            <div class="head"></div>
-            <div class="body"></div>
-            <div class="left-arm"></div>
-            <div class="right-arm"></div>
-            <div class="left-leg"></div>
-            <div class="right-leg"></div>
+            <div className="head"></div>
+            <div className="body"></div>
+            <div className="left-arm"></div>
+            <div className="right-arm"></div>
+            <div className="left-leg"></div>
+            <div className="right-leg"></div>
 
-            <div class="clearfix"></div>
+            <div className="clearfix"></div>
         </div>
     );
 }

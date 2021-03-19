@@ -10,7 +10,6 @@ const App = () => {
         setName(name);
     }
 
-    console.log(name)
     return (
         <div className="full-page">
             <Switch>
