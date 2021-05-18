@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const WORDS = ['Cat', 'Dog', 'Bird']
 
-const NewGame = ({ handleNewWord, setLetters }) => {
+const NewGame = ({ handleNewWord, setLetters, setMessage, setPoints, message, setNewGame }) => {
+
 
     useEffect(() => {
         chooseRandomWord()
@@ -13,6 +14,13 @@ const NewGame = ({ handleNewWord, setLetters }) => {
         const randomWord = WORDS[randomNumber];
         handleNewWord(randomWord);
         setLetters('');
+        setMessage('');
+        setPoints(10);
+        if (message === 'You win!') {
+            setNewGame(false);
+        }
+        setNewGame(true);
+
     }
 
     return (

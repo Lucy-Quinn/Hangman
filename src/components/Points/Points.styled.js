@@ -9,4 +9,11 @@ border-radius: 50%;
 border: 1px solid #000;
 `
 
-export { PointsContainer }
+const PointsLeft = styled.div`
+display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40% auto;
+`
+
+export { PointsContainer, PointsLeft }

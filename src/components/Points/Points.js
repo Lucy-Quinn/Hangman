@@ -1,9 +1,11 @@
 import React from 'react';
-import { PointsContainer } from './Points.styled';
+import { PointsContainer, PointsLeft } from './Points.styled';
 
-const Points = () => {
+const Points = ({ points }) => {
     return (
-        <PointsContainer></PointsContainer>
+        <PointsContainer>
+            <PointsLeft>{points}</PointsLeft>
+        </PointsContainer>
 
     );
 }
