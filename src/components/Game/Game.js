@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import NewGame from '../NewGame/NewGame';
 import Points from '../Points/Points';
-import Hangman from '../Hangman/Hangman';
+import HangmanFigure from '../HangmanFigure/HangmanFigure';
 import SecretWord from '../SecretWord/SecretWord';
 import Letters from '../Letters/Letters';
-import Message from '../Message/Message';
+import FinalResult from '../FinalResult/FinalResult';
 
 const Game = ({ name }) => {
     const [newWord, setNewWord] = useState('');
@@ -34,7 +34,6 @@ const Game = ({ name }) => {
         }
     }
 
-
     const handlingMessages = word => {
         if (word !== undefined && word.indexOf("_") < 0) {
             setMessage('You win!');
@@ -48,10 +47,6 @@ const Game = ({ name }) => {
             setMessage('Game over!');
         }
     }
-
-    // const isNewGame = (game) => {
-    //     setNewGame(game)
-    // }
 
     const isNotNewGame = (noGame) => {
         setNewGame(noGame)
@@ -67,9 +62,9 @@ const Game = ({ name }) => {
         <div>
             <h1>Welcome {name}</h1>
             <NewGame handleNewWord={handleNewWord} setLetters={setLetters} setMessage={setMessage} setPoints={setPoints} message={message} setNewGame={setNewGame} />
-            <Message message={message} />
+            <FinalResult message={message} />
             <Points points={points} />
-            <Hangman points={points} message={message} newGame={newGame} isNotNewGame={isNotNewGame} />
+            <HangmanFigure points={points} message={message} newGame={newGame} isNotNewGame={isNotNewGame} />
             <SecretWord secretWord={secretWord} letters={letters} handlingMessages={handlingMessages} />
             <Letters handleSelectedLetters={handleSelectedLetters} letters={letters} countingErrors={countingErrors} />
         </div>

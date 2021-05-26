@@ -1,5 +1,5 @@
 import React from 'react';
-import { SecretWordContainer } from './SecretWord.Styled';
+import { SecretWordContainer } from './SecretWord.styled';
 
 const SecretWord = ({ secretWord, letters, handlingMessages }) => {
 

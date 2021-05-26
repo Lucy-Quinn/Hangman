@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Message = ({ message }) => {
+const FinalResult = ({ message }) => {
     return (
         <div>
             {message}
@@ -8,4 +8,4 @@ const Message = ({ message }) => {
     );
 }
 
-export default Message;
+export default FinalResult;

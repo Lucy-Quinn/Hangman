@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './Hangman.css';
 
-const Hangman = ({ points, message, newGame, isNotNewGame }) => {
+const HangmanFigure = ({ points, message, newGame, isNotNewGame }) => {
 
     // const [remainingPoints, setRemainingPoints] = useState(points)
     // const [finalMessage, setFinalMessage] = useState(message)
@@ -74,4 +74,4 @@ const Hangman = ({ points, message, newGame, isNotNewGame }) => {
     );
 }
 
-export default Hangman;
+export default HangmanFigure;

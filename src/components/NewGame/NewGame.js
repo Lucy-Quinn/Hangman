@@ -4,7 +4,6 @@ const WORDS = ['Cat', 'Dog', 'Bird']
 
 const NewGame = ({ handleNewWord, setLetters, setMessage, setPoints, message, setNewGame }) => {
 
-
     useEffect(() => {
         chooseRandomWord()
     }, [])
